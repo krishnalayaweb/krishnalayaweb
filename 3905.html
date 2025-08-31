@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K-WEB</title>
+    <link rel="icon" type="image/png" href="title logo.png">
+    
+    
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #0b1225;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #6366f1;
+        --accent-2: #22c55e;
+        --accent-3: #f59e0b;
+        --accent-4: #ef4444;
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.15), transparent),
+                    radial-gradient(1200px 600px at 90% 10%, rgba(34,197,94,.12), transparent),
+                    var(--bg);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 18px 56px;
+      }
+
+
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+        border: 1px solid rgba(148,163,184,.18);
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+        text-align: center;
+        outline: 2px solid white;
+      }
+
+      .logo {
+        width: 137px;
+        height: 118px;
+        border-radius: 16px;
+        border: 2px dashed rgba(148,163,184,.45);
+        display: grid;
+        place-items: center;
+        color: var(--muted);
+        font-size: 12px;
+        user-select: none;
+        background: rgba(2,6,23,.4);
+        order: 2;
+        
+      }
+
+      .org-name {
+        font-weight: 700;
+        font-size: clamp(20px, 2.2vw, 28px);
+        letter-spacing: .4px;
+        order: 1;
+      }
+
+
+      .card {
+        margin-top: 22px;
+        background: linear-gradient(180deg, rgba(2,6,23,.55), rgba(2,6,23,.75));
+        border: 1px solid rgba(148,163,184,.18);
+        border-radius: calc(var(--radius) + 4px);
+        padding: clamp(18px, 3vw, 28px);
+        box-shadow: var(--shadow);
+        outline: 2px solid white;
+      }
+
+      .question {
+        margin: 4px 0 8px;
+        font-size: clamp(22px, 3.2vw, 34px);
+        line-height: 1.2;
+      }
+
+      .desc {
+        color: var(--muted);
+        font-size: clamp(14px, 1.3vw, 16px);
+        margin: 0 0 22px;
+      }
+
+      .button-row {
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+
+      .button-row .btn {
+        flex: 1 1 220px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 14px 16px;
+        border-radius: 14px;
+        border: 1px solid rgba(148,163,184,.25);
+        background: rgba(20, 31, 56, 0.6);
+        box-shadow: 0 6px 16px rgba(0,0,0,.25);
+        transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease;
+        will-change: transform;
+        color: #ffffff; 
+      }
+
+      .button-row .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 26px rgba(51, 0, 109, 0.523);
+        border-color: rgba(148,163,184,.45);
+      }
+
+      .btn-1 { background: linear-gradient(180deg, rgba(99,102,241,0.75), rgba(99,102,241,0.55)); }
+      .btn-2 {background: linear-gradient(180deg, rgba(34,197,94,0.75), rgba(34,197,94,0.55)); }
+      .btn-3 {background: linear-gradient(180deg, rgba(245,158,11,0.8), rgba(245,158,11,0.6)); }
+      .btn-4 {background: linear-gradient(180deg, rgba(239,68,68,0.8), rgba(239,68,68,0.6)); }
+
+
+      .btn:focus-visible {
+        outline: 3px solid rgba(99,102,241,.6);
+        outline-offset: 2px;
+      }
+
+      .foot {
+        color: var(--muted);
+        font-size: 12px;
+        text-align: center;
+        margin-top: 22px;
+        opacity: .85;
+      }
+
+            .back-button {
+        width: 45px; 
+        height: 45px; 
+        border-radius: 50%; 
+        background-color: #152344; 
+        margin-bottom: 10px;
+        margin-left:-50px;
+        color: white; 
+        border: none; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 24px; 
+        cursor: pointer; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+      }
+
+.back-button:hover {
+  background-color: #182544; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.523);
+}
+    </style>
+  </head>
+  <body>
+      <main class="wrap">
+      <button class="back-button" onclick="window.location.href='index.html'">
+            &#x2190;
+      </button>
+
+
+      <main class="wrap">
+            <header class="header" role="banner">
+        <div class="org-name"><u><h1>Student Report: 3905</h1></u></div>
+      </header>
+
+
+      <section class="card" aria-labelledby="q-heading">
+        <h2 id="q-heading" class="question">Marks gained by "Student" in RHP, RHM NQR:</h2>
+        <p class="desc">
+          
+        </p><hr>

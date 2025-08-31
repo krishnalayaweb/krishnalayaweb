@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>K-Dorm Activities</title>
+    <link rel="icon" type="image/png" href="title logo.png">
+    
+    
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #0b1225;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #6366f1;
+        --accent-2: #22c55e;
+        --accent-3: #f59e0b;
+        --accent-4: #ef4444;
+        --radius: 18px;
+        --shadow: 0 10px 30px rgba(0,0,0,.35);
+      }
+
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        color: var(--text);
+        background: radial-gradient(1200px 600px at 10% -10%, rgba(99,102,241,.15), transparent),
+                    radial-gradient(1200px 600px at 90% 10%, rgba(34,197,94,.12), transparent),
+                    var(--bg);
+      }
+
+      .wrap {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 28px 18px 56px;
+      }
+
+
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+        background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+        border: 1px solid rgba(148,163,184,.18);
+        border-radius: var(--radius);
+        padding: 20px;
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(6px);
+        text-align: center;
+        outline: 2px solid white;
+      }
+      .back-button {
+        width: 45px; 
+        height: 45px; 
+        border-radius: 50%; 
+        background-color: #152344; 
+        margin-bottom: 10px;
+        margin-left:-50px;
+        color: white; 
+        border: none; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-size: 24px; 
+        cursor: pointer; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+      }
+
+.back-button:hover {
+  background-color: #182544; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 255, 255, 0.523);
+}
+    .body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #a2d4ec, #ffffff, #d0e8f2);
+      background-attachment: fixed;
+      color: #333;
+    }
+
+    header {
+      background-color: rgba(0, 64, 128, 0.9);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: rgba(2, 1, 43, 0.493);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 26px rgba(0, 39, 12, 0.938);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 2rem;
+      border: rgb(68, 0, 255);
+      outline: 2px solid white;
+      
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      min-width: 180px;
+    }
+
+    button {
+      background-color: #222f4d;
+      color: white;
+      border: none;
+      padding: 1rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    button:hover {
+      background-color: #001e5a;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 26px rgba(51, 0, 109, 0.523);
+    }
+
+    .info-section {
+      flex: 1;
+    }
+
+    .info-box {
+      display: none;
+      background: #1b2744;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1rem;
+      border-left: 5px solid #0073e6;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      border-radius: 6px;
+    }
+
+    .info-box h2 {
+      margin-top: 0;
+    }
+
+    .rights{
+      color: var(--muted);
+        font-size: clamp(14px, 1.3vw, 16px);
+        margin: 0 0 22px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button-container {
+        width: 100%;
+        align-items: stretch;
+      }
+
+      .info-section {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+   
+
+    </style>
+  </head>
+    <body>
+      <main class="wrap">
+      <button class="back-button" onclick="window.location.href='index.html'">
+            &#x2190;
+      </button>
+      
+
+      </button>
+      <header class="header" role="banner">
+        <div class="org-name"><u><h1>Krishnalaya Dorm Activities</h1></u></div>
+      </header>
+    </main>
+
+    <div class="container">
+  <div class="button-container">
+    <button onclick="toggleInfo('K-MUN')"><center>K-MUN</center></button><br><br><br>
+    <button onclick="toggleInfo('cw')"><center>Creative Writing</center></button><br><br><br>
+    <button onclick="toggleInfo('fp')"><center>Inter-Dorm Face Painting</center></button><br><br><br>
+    <button onclick="toggleInfo('s')"><center>Inter-Dorm Singing</center></button><br><br><br>
+
+  </div>
+
+  <div class="info-section">
+    <div id="K-MUN" class="info-box">
+      <u><h3>K-MUN</h3></u>
+      <p><h2>About Krinshnalaya MUN</h2>
+        The KRISHNALAYA way of MUN (Model United Nations). Each deligate was provided with one department of our school,
+        i.e: Art department, English department, 5th, 6th grade, Govindalaya, etc.They each had a placard with thier names
+        and their department. There were the chairs (The judjes) and the director (supervisor). The 2-hour debating had
+        made all of us learn a lot in different ways.<br><br>
+        <hr>
+        <h3>Our honorable dignitary:</h3>
+        Bhramachari Sanatan Chaitanya<br><br>
+        <hr>
+        <h3>the chairs were:</h3>
+        S.Rithesh<br>
+        Saptarshi Pal<br>
+        Anirudh Perumala<br><br>
+        <hr>
+        <h3>The outstanding deligate was:</h3>
+        Yug Didwania<br>
+        <hr>
+        <h3>The best deligate was:</h3>
+        Yatharth Saraf
+
+      </p>
+    </div>
+
+    <div class="info-section">
+    <div id="cw" class="info-box">
+      <u><h3>Creative Writing</h3></u>
+      <p><h2>About Creative Writing</h2>
+        One sunday afternoon, many KRISHNALAYA students sat and expressed their creativity on paper as a part of the weeks 
+        event. Students submitted thier poems, articles and artworks. All the write-ups came out well and the event was a huge
+        success <b>**ADD CREATIVE WRITE-UPS**</b><br>
+
+      </p>
+    </div>
+    
+    <div class="info-section">
+    <div id="fp" class="info-box">
+      <u><h3>Face Painting Competition</h3></u>
+      <p><h2>About Face Painting Competition</h2>
+        Well well... what is a dorm activity without a bit of our old and messy friend 'PAINT' , and that too on 
+        someone's face. Anyways, apart from the jokes, the competition was not that chaotic as you would expect
+        it to be. The faces were painted beatifully by the dorm members and the people getting their face painted 
+        were scared but it all worked out at the end. .Winning Dorm- .
+        <b>**ADD PICTURES, NAMES OF PPL**</b><br>
+        </p></div>
+
+      <div class="info-section">
+    <div id="s" class="info-box">
+      <u><h3>Singing Competition</h3></u>
+      <p><h2>About Singing Competition</h2>
+        We all know that singing is a hobby and a part of all our lives. We sing while playing we sing while studying
+        we sing while taking a bath and so on.. To harness this potential of our creative dorm-mates we hosted the 
+        inter-dorm singing competition. We had a solo-singing, team-singing and the bhajan. 
+
+        <h3>Our honorable dignitary & judge:</h3>
+        Malikarjun Sir & Vivaan Jain<br>
+
+
+        <h4>The Participants Were (solo-singing):</h4>
+        Dorm-1: Vishnu Jalan<br>
+        Dorm-2: (did not participate)<br>
+        Dorm-3: Saptarshi Pal<br>
+        Dorm-4: <br>
+        Dorm-5: <br>
+        Dorm-6: Aaryaman Shukla & Anirudh Perumalla<br>
+        Dorm-7: <br><br>
+        <hr>
+        <h4>The Winners Were (solo-singing):</h4>
+        1st - Yug Dudhwewala<br>
+        2nd - Eklavya Agarwal<br><br>
+        <hr>
+        <h4>The Participants Were (team-singing):</h4>
+        Dorm-1: Vishnu Jalan & Veer Srimal<br>
+        Dorm-2: <br>
+        Dorm-3: (did not participate)<br>
+        Dorm-4: <br>
+        Dorm-5: <br>
+        Dorm-6: <br>
+        Dorm-7: <br>
+        <hr>
+        <h4>The Winners Were (team-singing):</h4>
+        1st - Eklavya Agarwal & Soham Jindal<br>
+        2nd - Vishnu Jalan & Veer Srimal<br>
+        <b>**ADD PICTURES AND NAMES OF PARTICIPANTS**</b><br>
+        </p></div>
+<script>
+  function toggleInfo(id) {
+    const boxes = document.querySelectorAll('.info-box');
+    boxes.forEach(box => {
+      box.style.display = box.id === id ? (box.style.display === 'block' ? 'none' : 'block') : 'none';
+
+    });
+
+  }
+</script>
+<br><br><br>
+</body>
+</html>
